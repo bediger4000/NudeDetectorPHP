@@ -12,7 +12,7 @@ Ap-Apid's paper doesn't specify the algorithm as tightly as an implementor might
 
 An implementor could decide to use 4-connectivity or 8-connectivity to
 determine the "connected regions" of skin-colored pixels. I used the [Two
-Pass]{https://en.wikipedia.org/wiki/Connected-component_labeling#Two-pass)
+Pass](https://en.wikipedia.org/wiki/Connected-component_labeling#Two-pass)
 algorithm from Wikipedia, and 4-connectivity..
 
 Ap-Apid's algorithm depends on the "three largest regions" of connected
