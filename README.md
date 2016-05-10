@@ -35,20 +35,25 @@ that surrounds the twelve points (topmost, leftmost, lowermost and rightmost)
 of the 3 biggest skin-colored regions. But maybe Ap-Apid means something else,
 an irregular, possibly concave polygon perhaps.
 
-### Example Usage
+### Example Use
 
     #!/usr/bin/env php
     <?php
     include("NudeDetector.php");
     
-    $detector = new NudeDetector(null, 'YCbCr');
+    $detector = new NudeDetector(null, 'YCbCr');  # 'HSV' for alternate skin-color-detection
     foreach ($argv as $idx => $filename) {
 		if ($idx == 0) continue;
 		$detector->set_file_name($filename);
         if ($detector->is_nude()) { 
-            // Deal with $filename as ceremonially taboo
-        }
+            // Deal with $filename as ritually unclean.
+        } else {
+			// $filename probably doesn't contain nudity
+		}
     }
+
+Notice that you can use the methods `set_file_name()` followed by `is_nude()`
+without creating a new instance of `NudeDetector`.
 
 ### Example Programs
 
@@ -56,14 +61,10 @@ The example program illustrate features of `Class NudeDetectorPhp`
 that are beyond a simple example. They also allow you to check on
 intermediate steps in the nudity determination.
 
-#### `Checker.php`
-
 > `Checker.php imagefile [imagefile ...]`
 
 Check each image file for nudity, using both HSV and YCbCr skin color models.
 Print out reasons for why an image doesn't qualify as "containing nudity".
-
-#### `skin_map.php`
 
 > `skin_map.php imagefile prefix`
 
@@ -76,14 +77,10 @@ Flicking between the two images with, for example, `feh` image viewer, gives
 you some idea of differences in how the two skin-color models in
 NudeDetectorPHP decide on skin colored pixels.
 
-#### `region_colors.php`
-
 > `region_colors.php imagefile outputfile`
 
 Creates a GIF-format output file with each connected region of skin-colored-pixels
 in the original image as a different color in the output image.
-
-#### `bounding_polygon.php`
 
 > `bounding_polygon.php imagefile outputfile`
 
@@ -97,7 +94,7 @@ and head shots as "nudity".  It's confused by natural colors, sand, wood, rock
 or soil or even leaves. This is a flaw of skin color detection, but Ap-Apid
 does specify an HSV skin-color test.
 
-Overall, I can't even characterize it as "too strict" (lots of false positives),
+Overall, I can't even characterize it as "too prudish" (lots of false positives),
 or "too lecherous" (lots of false negatives).
 
 ### Other implementation
