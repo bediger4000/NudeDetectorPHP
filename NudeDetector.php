@@ -514,8 +514,6 @@ class NudeDetector {
 			$vector = array($last_delta_x/$last_magnitude, $last_delta_y/$last_magnitude);
 			$current_point = $next_point;
 
-			#echo "\t(". $current_point[0] .", ". $current_point[1] . ")\n";
-
 			$this->hull[] = $current_point;
 			++$point_count;
 

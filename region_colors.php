@@ -2,16 +2,12 @@
 <?php
 include("NudeDetector.php");
 
-$method = 'HSV';
-
 if ($argc == 1)
 	exit;
 
-$method = $argv[1];
+$input_file = $argv[1];
 
-$input_file = $argv[2];
-
-$detector = new NudeDetector($input_file, $method);
+$detector = new NudeDetector($input_file, 'HSV');
 echo "map sking pixels\n";
 $detector->map_skin_pixels();
 echo "determine regions\n";
@@ -23,6 +19,6 @@ $detector->sort_regions_by_population();
 echo "create colored regions\n";
 $img = $detector->create_colored_regions();
 
-imagegif($img, $argv[3]);
+imagegif($img, $argv[2]);
 imagedestroy($img);
 
