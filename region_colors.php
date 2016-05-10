@@ -8,7 +8,7 @@ if ($argc == 1)
 $input_file = $argv[1];
 
 $detector = new NudeDetector($input_file, 'HSV');
-echo "map sking pixels\n";
+echo "map skin pixels\n";
 $detector->map_skin_pixels();
 echo "determine regions\n";
 $detector->determine_regions();
