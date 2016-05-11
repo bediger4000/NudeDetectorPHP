@@ -2,6 +2,6 @@
     "NudeDetector": "bediger4000/NudeDetectorPHP",
     "description": "Dectect images containing nudity some of the time",
     "require": {
-        "php": "^5.3.3 || ^7.0",
+        "php": "^5.3.3 || ^7.0"
     }
 }
