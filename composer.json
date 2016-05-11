@@ -1,5 +1,5 @@
 {
-    "name": "bediger4000/NudeDetectorPHP",
+    "name": "bediger4000/nudedetectorphp",
     "description": "Dectect images containing nudity some of the time",
     "require": {
         "php": "^5.3.3 || ^7.0"
