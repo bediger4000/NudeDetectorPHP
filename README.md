@@ -100,5 +100,5 @@ or "too lecherous" (lots of false negatives).
 ### Other implementation
 
 The most widely known implementation of Rigan Ap-Apid's algorithm is
-(nude.js)[https://github.com/pa7/nude.js]. I didn't transliterate `nude.js` to
+[nude.js](https://github.com/pa7/nude.js). I didn't transliterate `nude.js` to
 PHP, I implemented the algorithm in Ap-Apid's paper from scratch.
