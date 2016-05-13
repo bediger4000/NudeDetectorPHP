@@ -123,14 +123,17 @@ class NudeDetector {
 		}
 	}
 
-	function islamic_skin_detector($R, $G, $B) {
+	# RGB based instead of HSV or YCbCr. Popular (?) amongst
+	# PHP people, I think.
+	function alsharif_skin_detector($R, $G, $B) {
 		# skin detection criteria from "Image Filter v 1.0".
-		$islamic_skin_colored = FALSE;
+		# http://www.phpclasses.org/package/3269-PHP-Determine-whether-an-image-may-contain-nudity.html
+		$alsharif_skin_colored = FALSE;
 		if ($R >= 0x79 && $R <= 0xFE
 			&& $G >= 0x3B && $G <= 0xC5
 			&& $B >= 0x24 && $G <= 0xBF)
-				$islamic_skin_colored = TRUE;
-		return $islamic_skin_colored;
+				$alsharif_skin_colored = TRUE;
+		return $alsharif_skin_colored;
 	}
 
 	function YCbCr_skin_detector($r, $g, $b) {
