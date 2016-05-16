@@ -87,6 +87,14 @@ in the original image as a different color in the output image.
 Creates a GIF-format output file that has the "bounding polygon" of Ap-Apid's
 algorithm clipping the skin-colored pixels.
 
+### Generate fake nudity
+> `fake_nude.php x y imagefile`
+
+Generates a JPEG-format imagefile `x` pixels wide and `y` pixels tall. This image
+does not contain any nudity. In tact the "skin colors" it generates are usually not
+even in the realm of biological, but `Checker.php` will consistently label the
+image as containing nudity. Ha ha!
+
 ### How Does It Perform?
 
 In my personal evaluation, not very well. It almost always identifies portraits
