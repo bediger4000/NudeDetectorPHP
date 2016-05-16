@@ -218,7 +218,7 @@ class NudeDetector {
 		# Criteria (c)
 		if ($largest_region_portion < 0.45) {
 			if ($this->reasons)
-				printf("Largest skin-colored region is %.2f%% of total image pixels, < 45%%\n");
+				printf("Largest skin-colored region is %.2f%% of total image pixels, < 45%%\n", $largest_region_portion*100);
 			return FALSE;
 		}
 
