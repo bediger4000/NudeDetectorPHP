@@ -637,7 +637,7 @@ class NudeDetector {
 
 		$this->region_population = NULL;
 
-		$equiv_reqions = array(0);  // Index of 0 is invalid
+		$equiv_regions = array(0);  // Index of 0 is invalid
 		$this->region_numbers = array_fill(0, $this->width+1, array_fill(0, $this->height+1, 0));
 
 		// For now, $this->region_numbers[$x][$y], if nonzero, is an index into
